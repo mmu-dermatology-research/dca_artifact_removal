@@ -164,11 +164,11 @@ def run_super_resolution(image, mask):
     """
     super_res = cv2.dnn_superres.DnnSuperResImpl_create()
     #try:
-    #    path = r'../Models/EDSR_x4.pb'
-    #    super_res.readModel(path)
-    #except:
-    path = r'../../Models/EDSR_x4.pb'
+    path = r'../Models/EDSR_x4.pb'
     super_res.readModel(path)
+    #except:
+    #    path = r'../../Models/EDSR_x4.pb'
+    #    super_res.readModel(path)
     #super_res.readModel(path)
     super_res.setModel("edsr",4)
     upsampled = super_res.upsample(image)

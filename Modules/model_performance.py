@@ -25,8 +25,8 @@ def main():
     
     """
     metrics = get_metrics(
-        model_path = "D:/OneDrive - MMU/Journal_Project/Models/Baseline_Unbalanced/InceptionResNetV2/SGD/64/InceptionResNetV2_batchSize_0_opt_SGD_model.37.h5",
-        src_path_val = r"D:/OneDrive - MMU/Journal_Project/Data/dca_split_unbalanced_224x224/test/oth_telea"
+        model_path = r"D:/OneDrive - MMU/Journal_Project/Models/balanced_dca_set/dca_realistic/InceptionResNetV2/SGD/64/InceptionResNetV2_batchSize_0_opt_SGD_model.30.h5",
+        src_path_val = r"C:/Users/Sam/Desktop/full_test_set/inpainted_telea/"
     )
 
 def get_metrics(model_path, src_path_val):

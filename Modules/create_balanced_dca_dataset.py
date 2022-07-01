@@ -142,7 +142,7 @@ def main():
     ###########################################################################################################
                                                                                                            ####
     # SPECIFY PATH TO DIRECTORY CONTAINING .CSV FILES LOCATED ON REPOSITORY                                ####
-    csv_home_path = r"../Data/dataset_csv_files/"                                                          ####
+    csv_home_path = r"C:/Users/Sam/Desktop/isic_balanced_dca_split/csv/"                                   ####
                                                                                                            ####
     # SPECIFY PATH TO THE UNBALANCED ISIC DATASET                                                          ####
     unbalanced_isic_dataset = r"C:/Users/Sam/Downloads/isic_cleaned_unbalanced_mel_oth_224x224/"           ####

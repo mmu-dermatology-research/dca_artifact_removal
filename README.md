@@ -1,11 +1,40 @@
 # artifact_removal
 
+## Requirements
+{{{
+1. Datasets:
+		- ISIC unbalanced dataset (Duplicates removed).. follow guide at https://github.com/mmu-dermatology-research/isic_duplicate_removal_strategy - save this dataset within the <code>Data</code> directory.
+		- Fitzpatrick 17k.. follow guide at https://github.com/mattgroh/fitzpatrick17k - save this dataset within the <code>Data</code> directory.
+		- DCA Masks.. use "Generate all DCA masks" method at https://github.com/mmu-dermatology-research/dark_corner_artifact_removal and save results within <code>Data</code> directory. <code>./Data/DCA_Masks/</code>
+2. Models:
+    - Download <code>EDSR.pb</code> from https://github.com/Saafke/EDSR_Tensorflow and save inside the <code>Models</code> directory. <code>/Models/EDSR_x4.pb</code>
+3. Installations:
+    - Python 3.9.7
+		- Anaconda 4.11.0
+		- pandas 1.3.5
+		- numpy 1.21.5
+		- scikit-learn 1.0.2
+		- scikit-image 0.16.2
+		- Jupyter Notebook
+		- matplotlib 3.5.0
+		- OpenCV 4.5.5
+		- Pillow 8.4.0
+		- Tensorflow 2.9.0-dev20220203
+		- Tensorflow-GPU 2.9.0-dev20220203
+		- CUDA 11.2.1
+		- CuDNN 8.1
+		- Keras
+}}}
+
 ## Generating the dca split dataset
+{{{
 1. Open "./Modules/create_balanced_dca_dataset.py" module
 2. Read through __docstring__ for module carefully - changing filepaths as necessary
 3. Execute the module
+}}}
 
 **Full Model Performances on all individual testing sets:**
+{{{
 <table>
 	<tr>
 		<td>Model Used</td>
@@ -53,3 +82,74 @@
 <tr><td> </td><td>ns-oth</td><td>0.58</td><td>0.79</td><td>0.37</td><td>0.65</td><td>0.65</td><td>0.56</td></tr>
 <tr><td> </td><td>telea-oth</td><td>0.58</td><td>0.79</td><td>0.37</td><td>0.65</td><td>0.65</td><td>0.56</td></tr>
 </table>
+}}}
+
+## References
+{{{
+```
+@article{groh2021evaluating,
+  title={Evaluating Deep Neural Networks Trained on Clinical Images in Dermatology with the Fitzpatrick 17k Dataset},
+	author={Groh, Matthew and Harris, Caleb and Soenksen, Luis and Lau, Felix and Han, Rachel and Kim, Aerin and Koochek, Arash and Badri, Omar},
+  journal={arXiv preprint arXiv:2104.09957},
+  year={2021}
+}
+
+@article{cassidy2021isic,
+ title   = {Analysis of the ISIC Image Datasets: Usage, Benchmarks and Recommendations},
+ author  = {Bill Cassidy and Connah Kendrick and Andrzej Brodzicki and Joanna Jaworek-Korjakowska and Moi Hoon Yap},
+ journal = {Medical Image Analysis},
+ year    = {2021},
+ issn    = {1361-8415},
+ doi     = {https://doi.org/10.1016/j.media.2021.102305},
+ url     = {https://www.sciencedirect.com/science/article/pii/S1361841521003509}
+} 
+
+@misc{rosebrock_2020, 
+ title   = {Grad-cam: Visualize class activation maps with Keras, tensorflow, and Deep Learning}, 
+ url     = {https://pyimagesearch.com/2020/03/09/grad-cam-visualize-class-activation-maps-with-keras-tensorflow-and-deep-learning/}, 
+ journal = {PyImageSearch}, 
+ author  = {Rosebrock, Adrian}, 
+ year    = {2020}, 
+ month   = {3},
+ note    = {[Accessed: 10-03-2022]}
+} 
+
+@article{scikit-image,
+ title   = {scikit-image: image processing in {P}ython},
+ author  = {van der Walt, {S}t\'efan and {S}ch\"onberger, {J}ohannes {L}. and
+           {Nunez-Iglesias}, {J}uan and {B}oulogne, {F}ran\c{c}ois and {W}arner,
+           {J}oshua {D}. and {Y}ager, {N}eil and {G}ouillart, {E}mmanuelle and
+           {Y}u, {T}ony and the scikit-image contributors},
+ year    = {2014},
+ month   = {6},
+ keywords = {Image processing, Reproducible research, Education,
+             Visualization, Open source, Python, Scientific programming},
+ volume  = {2},
+ pages   = {e453},
+ journal = {PeerJ},
+ issn    = {2167-8359},
+ url     = {https://doi.org/10.7717/peerj.453},
+ doi     = {10.7717/peerj.453}
+}
+
+@article{scikit-learn,
+ title   = {Scikit-learn: Machine Learning in {P}ython},
+ author  = {Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+ journal = {Journal of Machine Learning Research},
+ volume  = {12},
+ pages   = {2825--2830},
+ year    = {2011}
+}
+
+@inproceedings{lim2017enhanced,
+  title  = {Enhanced deep residual networks for single image super-resolution},
+  author = {Lim, Bee and Son, Sanghyun and Kim, Heewon and Nah, Seungjun and Mu Lee, Kyoung},
+  booktitle= {Proceedings of the IEEE conference on computer vision and pattern recognition workshops},
+  pages  = {136--144},
+  year   = {2017}
+}
+```
+}}}

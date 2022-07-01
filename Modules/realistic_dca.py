@@ -9,6 +9,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 from dca_removal import __calculate_reduction_rate
+from isic_data import _image_alter_selection
 
 def main():
     """Module testing main method
@@ -28,7 +29,9 @@ def main():
     mask = cv2.cvtColor(mask, cv2.COLOR_BGR2RGB)
     
     # Call the method
-    augmented_image = augment_standardised_dca(orig_image, blur_type = "erode")
+    #augmented_image = augment_standardised_dca(orig_image, blur_type = "erode")
+    augmented_image = augment_binary_dca(orig_image, mask)
+    plt.imshow(augmented_image)
 
 def extract_mask_vars(mask):
     """Extract the centre point and the radius of the dca in the mask
@@ -71,6 +74,7 @@ def augment_dca(image, mask, kernel_size = (9, 9), sigma = 20, blur_type = "dila
     blur_depth
         radius size to blur
     """
+    image = _image_alter_selection(image)
     if blur_type == "erode":
     
         # Mask the image
@@ -123,6 +127,16 @@ def augment_standardised_dca(image, kernel_size = (9, 9), sigma = 20, blur_type 
     mask = mask.astype('float32') 
     
     return augment_dca(image, mask, kernel_size, sigma, blur_type, blur_depth)
+
+def augment_binary_dca(image, mask):
+    """Augment a DCA without gaussian blur.
+    
+    """
+    image = _image_alter_selection(image)
+    output = image.copy()
+    output[mask.astype(np.bool)] = 0
+    return output
+    
     
 
     
