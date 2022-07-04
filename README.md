@@ -84,6 +84,10 @@
 </table>
 }}}
 
+
+**Full GradCAM Comparison results**
+![GradCAM Comparison](full_comparison.png)
+
 ## References
 {{{
 ```
