@@ -29,6 +29,12 @@
 2. Read through __docstring__ for module carefully - changing filepaths as necessary
 3. Execute the module
 
+## Project Steps	
+1. Train the models: 		train three InceptionResNetV2 networks on each of the training/validation sets to form a model on the clean set, a model on the binary dca set, and a model on the realistic dca set. Refer to the paper for more information on the network hyper-parameters.
+2. Score the models: 		score the each of the models on each of the individual test sets, this can be done with the model_performance.py module.
+3. Extract the gradcam heatmaps from all images:	run the extract_gradcam.ipynb notebook. (ensure that all of the required filepaths are uncommented)
+4. Calculate the brightness intensities for each of the test set images:	modify the base image filepath in the split_intensity.py module to reflect the root folder of the extracted heatmaps. Run the script to generate a .csv file for the internal and external brightness measures for each image. Once this is complete, run the calculate_intensity_averages.py module to calculate the averages across all of the images. 
+
 **Full Model Performances on all individual testing sets:**
 <table>
 	<tr>
