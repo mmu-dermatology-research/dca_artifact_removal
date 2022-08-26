@@ -84,10 +84,6 @@
 <tr><td> </td><td>telea-oth</td><td>0.58</td><td>0.79</td><td>0.37</td><td>0.65</td><td>0.65</td><td>0.56</td></tr>
 </table>
 
-
-**Full GradCAM Comparison results**
-![GradCAM Comparison](full_comparison.png)
-
 ## References
 ```
 @article{groh2021evaluating,
