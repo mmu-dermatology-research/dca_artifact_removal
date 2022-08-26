@@ -1,7 +1,6 @@
 # artifact_removal
 
 ## Requirements
-{{{
 1. Datasets:
 		- ISIC unbalanced dataset (Duplicates removed).. follow guide at https://github.com/mmu-dermatology-research/isic_duplicate_removal_strategy - save this dataset within the <code>Data</code> directory.
 		- Fitzpatrick 17k.. follow guide at https://github.com/mattgroh/fitzpatrick17k - save this dataset within the <code>Data</code> directory.
@@ -24,17 +23,13 @@
 		- CUDA 11.2.1
 		- CuDNN 8.1
 		- Keras
-}}}
 
 ## Generating the dca split dataset
-{{{
 1. Open "./Modules/create_balanced_dca_dataset.py" module
 2. Read through __docstring__ for module carefully - changing filepaths as necessary
 3. Execute the module
-}}}
 
 **Full Model Performances on all individual testing sets:**
-{{{
 <table>
 	<tr>
 		<td>Model Used</td>
@@ -82,14 +77,12 @@
 <tr><td> </td><td>ns-oth</td><td>0.58</td><td>0.79</td><td>0.37</td><td>0.65</td><td>0.65</td><td>0.56</td></tr>
 <tr><td> </td><td>telea-oth</td><td>0.58</td><td>0.79</td><td>0.37</td><td>0.65</td><td>0.65</td><td>0.56</td></tr>
 </table>
-}}}
 
 
 **Full GradCAM Comparison results**
 ![GradCAM Comparison](full_comparison.png)
 
 ## References
-{{{
 ```
 @article{groh2021evaluating,
   title={Evaluating Deep Neural Networks Trained on Clinical Images in Dermatology with the Fitzpatrick 17k Dataset},
@@ -156,4 +149,3 @@
   year   = {2017}
 }
 ```
-}}}
