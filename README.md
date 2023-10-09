@@ -1,4 +1,4 @@
-# artifact_removal
+# Dermoscopic Dark Corner Artifacts Removal: Friend or Foe?
 
 ## Requirements
 1. Datasets:
