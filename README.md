@@ -1,4 +1,16 @@
-# artifact_removal
+# Dermoscopic Dark Corner Artifacts Removal: Friend or Foe?
+
+## Citation
+If you use any methods, data, or code from this repository please consider citing our paper:
+
+```BibTex
+@misc{pewton2023dca,
+  title  = {Dermoscopic Dark Corner Artifacts Removal: Friend or Foe?}, 
+  author = {Samuel William Pewton and Bill Cassidy and Connah Kendrick and Moi Hoon Yap},
+  year   = {2023},
+  doi    = {10.48550/arXiv.2306.13446}
+}
+```
 
 ## Requirements
 1. Datasets:
