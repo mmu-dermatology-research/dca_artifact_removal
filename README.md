@@ -14,7 +14,7 @@ If you use any methods, data, or code from this repository please consider citin
 
 
 ## Masks
-If you only require the dark corner artifact masks from these experiments to use in your own dataset, they can be downloaded from the following Kaggle Database repository:
+If you only require the dark corner artifact masks from these experiments, they can be downloaded from the following Kaggle Database repository:
 
 https://www.kaggle.com/datasets/mmucomputervision/dark-corner-artifact-masks-for-isic-images
 
