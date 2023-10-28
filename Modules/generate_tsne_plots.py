@@ -235,4 +235,57 @@ def tsne_duo_plot(
         labels=class_names
     )
 
+    # fig.savefig(savepath)
+
+
+def tsne_duo_plot_2(
+    plot_width: int,
+    plot_height: int,
+    max_dim: int,
+    filepaths: List[Tuple[str]],
+    classes: List[Tuple[str]],
+    class_names: List[str],
+    tsne_encodings: List[Tuple[np.ndarray, np.ndarray]],
+    figsize: Tuple[int, int],
+    savepath: str
+):
+    """
+    """
+    full_image = Image.new('RGBA', (plot_width, plot_height))
+    for i in range(len(classes)):
+        for img, x, y in zip(filepaths[i], tsne_encodings[i][0], tsne_encodings[i][1]):
+            n = Image.open(img)
+            rs = max(1, n.width/max_dim, n.height/max_dim)
+            n = n.resize((int(n.width/rs), int(n.height/rs)), Image.LANCZOS)
+            full_image.paste(
+                n,
+                (int((plot_width-max_dim)*x), int((plot_height-max_dim)*y)),
+                mask=n.convert('RGBA')
+            )
+
+    colours = ['g', 'r', 'b']
+
+    fig, axes = plt.subplots(2, 1, figsize=figsize)
+    axes[0].imshow(full_image)
+    for i in range(len(classes)):
+        scatter = axes[1].scatter(
+            tsne_encodings[i][0],
+            tsne_encodings[i][1],
+            c=colours[i],
+            s=8,
+            label=class_names[i]
+        )
+
+    for ax in axes:
+        ax.tick_params(
+            left=False,
+            right=False,
+            labelleft=False,
+            labelbottom=False,
+            bottom=False
+        )
+
+    axes[1].invert_yaxis()
+    axes[1].legend(fontsize="20")
+
     fig.savefig(savepath)
