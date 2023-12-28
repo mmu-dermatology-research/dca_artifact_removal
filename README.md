@@ -4,11 +4,15 @@
 If you use any methods, data, or code from this repository please consider citing our paper:
 
 ```BibTex
-@misc{pewton2023dca,
-  title  = {Dermoscopic Dark Corner Artifacts Removal: Friend or Foe?}, 
-  author = {Samuel William Pewton and Bill Cassidy and Connah Kendrick and Moi Hoon Yap},
-  year   = {2023},
-  doi    = {10.48550/arXiv.2306.13446}
+@article{pewton2023dca,
+  title = {Dermoscopic dark corner artifacts removal: Friend or foe?},
+  journal = {Computer Methods and Programs in Biomedicine},
+  volume = {244},
+  pages = {107986},
+  year = {2024},
+  issn = {0169-2607},
+  doi = {https://doi.org/10.1016/j.cmpb.2023.107986},
+  author = {Samuel William Pewton and Bill Cassidy and Connah Kendrick and Moi Hoon Yap}
 }
 ```
 
