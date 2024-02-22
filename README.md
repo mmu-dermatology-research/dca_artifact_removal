@@ -111,7 +111,7 @@ https://www.kaggle.com/datasets/mmucomputervision/dark-corner-artifact-masks-for
 ```
 @article{groh2021evaluating,
   title={Evaluating Deep Neural Networks Trained on Clinical Images in Dermatology with the Fitzpatrick 17k Dataset},
-	author={Groh, Matthew and Harris, Caleb and Soenksen, Luis and Lau, Felix and Han, Rachel and Kim, Aerin and Koochek, Arash and Badri, Omar},
+  author={Groh, Matthew and Harris, Caleb and Soenksen, Luis and Lau, Felix and Han, Rachel and Kim, Aerin and Koochek, Arash and Badri, Omar},
   journal={arXiv preprint arXiv:2104.09957},
   year={2021}
 }
