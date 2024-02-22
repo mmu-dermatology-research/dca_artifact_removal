@@ -110,10 +110,10 @@ https://www.kaggle.com/datasets/mmucomputervision/dark-corner-artifact-masks-for
 ## References
 ```
 @article{groh2021evaluating,
-  title={Evaluating Deep Neural Networks Trained on Clinical Images in Dermatology with the Fitzpatrick 17k Dataset},
-  author={Groh, Matthew and Harris, Caleb and Soenksen, Luis and Lau, Felix and Han, Rachel and Kim, Aerin and Koochek, Arash and Badri, Omar},
-  journal={arXiv preprint arXiv:2104.09957},
-  year={2021}
+  title   = {Evaluating Deep Neural Networks Trained on Clinical Images in Dermatology with the Fitzpatrick 17k Dataset},
+  author  = {Groh, Matthew and Harris, Caleb and Soenksen, Luis and Lau, Felix and Han, Rachel and Kim, Aerin and Koochek, Arash and Badri, Omar},
+  journal = {arXiv preprint arXiv:2104.09957},
+  year    = {2021}
 }
 
 @article{cassidy2021isic,
@@ -167,10 +167,10 @@ https://www.kaggle.com/datasets/mmucomputervision/dark-corner-artifact-masks-for
 }
 
 @inproceedings{lim2017enhanced,
-  title  = {Enhanced deep residual networks for single image super-resolution},
-  author = {Lim, Bee and Son, Sanghyun and Kim, Heewon and Nah, Seungjun and Mu Lee, Kyoung},
-  booktitle= {Proceedings of the IEEE conference on computer vision and pattern recognition workshops},
-  pages  = {136--144},
-  year   = {2017}
+  title     = {Enhanced deep residual networks for single image super-resolution},
+  author    = {Lim, Bee and Son, Sanghyun and Kim, Heewon and Nah, Seungjun and Mu Lee, Kyoung},
+  booktitle = {Proceedings of the IEEE conference on computer vision and pattern recognition workshops},
+  pages     = {136--144},
+  year      = {2017}
 }
 ```
