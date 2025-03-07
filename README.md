@@ -5,14 +5,14 @@ If you use any methods, data, or code from this repository please consider citin
 
 ```BibTex
 @article{pewton2023dca,
-  title = {Dermoscopic dark corner artifacts removal: Friend or foe?},
+  title   = {Dermoscopic dark corner artifacts removal: Friend or foe?},
   journal = {Computer Methods and Programs in Biomedicine},
-  volume = {244},
-  pages = {107986},
-  year = {2024},
-  issn = {0169-2607},
-  doi = {https://doi.org/10.1016/j.cmpb.2023.107986},
-  author = {Samuel William Pewton and Bill Cassidy and Connah Kendrick and Moi Hoon Yap}
+  volume  = {244},
+  pages   = {107986},
+  year    = {2024},
+  issn    = {0169-2607},
+  doi     = {https://doi.org/10.1016/j.cmpb.2023.107986},
+  author  = {Samuel William Pewton and Bill Cassidy and Connah Kendrick and Moi Hoon Yap}
 }
 ```
 
@@ -25,7 +25,7 @@ https://www.kaggle.com/datasets/mmucomputervision/dark-corner-artifact-masks-for
 
 ## Requirements
 1. Datasets:
-		- ISIC unbalanced dataset (Duplicates removed).. follow guide at https://github.com/mmu-dermatology-research/isic_duplicate_removal_strategy - save this dataset within the <code>Data</code> directory.
+		- ISIC unbalanced dataset (duplicates removed).. follow guide at https://github.com/mmu-dermatology-research/isic_duplicate_removal_strategy - save this dataset within the <code>Data</code> directory.
 		- Fitzpatrick 17k.. follow guide at https://github.com/mattgroh/fitzpatrick17k - save this dataset within the <code>Data</code> directory.
 		- DCA Masks.. use "Generate all DCA masks" method at https://github.com/mmu-dermatology-research/dark_corner_artifact_removal and save results within <code>Data</code> directory. <code>./Data/DCA_Masks/</code>
 2. Models:
@@ -60,13 +60,13 @@ https://www.kaggle.com/datasets/mmucomputervision/dark-corner-artifact-masks-for
 
 **Full Model Performances on all individual testing sets:**
 <table>
-	<tr>
-		<td>Model Used</td>
-    <td>Test Set</td>
-    <td colspan="3">Metrics</td>
-    <td colspan="3">Micro-Average</td>
-	</tr>
-	<tr>
+<tr>
+  <td>Model Used</td>
+  <td>Test Set</td>
+  <td colspan="3">Metrics</td>
+  <td colspan="3">Micro-Average</td>
+</tr>
+<tr>
 <td> </td><td> </td><td>Acc</td><td>TPR</td><td>TNR</td><td>F1</td><td>AUC</td><td>Precision</td>
 </tr>
 <tr><td>Clean</td><td>base-small</td><td>0.59</td><td>0.86</td><td>0.32</td><td>0.68</td><td>0.63</td><td>0.56</td></tr>
